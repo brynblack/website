@@ -23,7 +23,7 @@ export default function Page() {
         </nav>
         <div className="fancy-content" id="wrapper"></div>
         <div className="info-box">
-          <h1>Welcome to <span className="magic-text">my portfolio!</span></h1>
+          <h1>Welcome to <span className="magic-text">my website!</span></h1>
           <h3>Made with love by Brynley 💜</h3>
           <div className="info-box-links">
             <a href="https://github.com/brynblack" aria-label="GitHub">
