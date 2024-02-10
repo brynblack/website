@@ -4,7 +4,8 @@ const fira_code = Fira_Code({ subsets: ["latin"] });
 
 export default function Page() {
   return (
-    <main className="flex justify-center p-8">
+    <main className="flex flex-col items-center p-8 gap-12 slideright">
+      <h1 className="font-bold text-4xl pt-4">My Projects</h1>
       <div className="grid grid-cols-2 gap-8 max-w-screen-xl w-full">
         <Card name="ole" desc="A fast, scalable online learning platform." />
         <Card name="chess" desc="A Rust implementation of the famous game Chess." />

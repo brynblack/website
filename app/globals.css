@@ -6,6 +6,8 @@
   --foreground-rgb: 100, 100, 100;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+
+  --foreground-rgb-rough: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +16,8 @@
     --foreground-rgb: 175, 175, 175;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+
+    --foreground-rgb-rough: 255, 255, 255;
   }
 }
 
@@ -33,16 +37,37 @@ body {
   }
 }
 
-.fancy-content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  grid-template-rows: repeat(var(--rows), 1fr);
+@keyframes slide-right {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
 
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-.fancy-content .square {
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
+
+.slideright {
+  animation-name: slide-right;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
+
+nav a {
+  transition-duration: 100ms;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+nav a.active {
+  color: rgb(var(--foreground-rgb-rough));
+}
+
+nav a:hover {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
 
