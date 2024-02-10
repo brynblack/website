@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Page() {
   return (
     <main className="flex h-full">
-      <div className="flex flex-col gap-2 absolute bottom-0 m-12">
+      <div className="flex flex-col gap-2 absolute bottom-0 m-12 slideright">
         <h1 className="text-4xl font-medium">Welcome to my website!</h1>
         <h3 className="text-xl">Made with love by Brynley 💜</h3>
         <div className="flex gap-4 items-center *:grayscale">

@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className="flex flex-col justify-center items-center p-4 gap-12">
+    <main className="flex flex-col justify-center items-center p-4 gap-12 slideright">
+      <h1 className="font-bold text-4xl pt-8">About Me</h1>
       <div className="flex justify-between items-center gap-12 max-w-screen-xl w-full">
         <div className="flex flex-col gap-2 *:text-xl">
           <p>My name is Brynley Llewellyn-Roux.</p>
