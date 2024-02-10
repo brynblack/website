@@ -40,10 +40,10 @@ export default function RootLayout({
 
 function NavBar() {
   return (
-    <nav className="flex justify-center border-b dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800">
+    <nav className="flex justify-center border-b border-neutral-200 dark:border-neutral-800">
       <div className="flex justify-between max-sm:justify-center items-center max-w-7xl w-full h-20 p-8">
         <Link href="/">
-          <Image src="/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
+          <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>
         <div className="flex gap-10 max-sm:hidden">
           <Link href="/about">About</Link>
