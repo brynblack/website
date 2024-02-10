@@ -28,7 +28,7 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body className={rubik.className}>
+      <body className={rubik.className + " flex flex-col w-dvh h-dvh"}>
         <NavBar/>
         {children}
         <SpeedInsights />
@@ -40,12 +40,12 @@ export default function RootLayout({
 
 function NavBar() {
   return (
-    <nav className="border-b border-neutral-800">
-      <div className="flex justify-between items-center w-full p-8">
+    <nav className="flex justify-center border-b dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800">
+      <div className="flex justify-between max-sm:justify-center items-center max-w-7xl w-full h-20 p-8">
         <Link href="/">
           <Image src="/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>
-        <div className="flex gap-10">
+        <div className="flex gap-10 max-sm:hidden">
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/contact">Contact</Link>

@@ -2,15 +2,17 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className="flex justify-between gap-24 m-4">
-      <div className="flex flex-col gap-1">
-        <h1>My name is Brynley Llewellyn-Roux.</h1>
-        <h2>I am a software engineer based in Sydney, Australia.</h2>
-        <p>I have 6 years of programming experience and I&apos;m currently studying at the University of Technology Sydney.</p>
-        <h3>I am open to work.</h3>
-        <h2>You can check out more info about me by going to my GitHub <a href="https://github.com/brynblack"></a></h2>
+    <main className="flex justify-center">
+      <div className="flex justify-between gap-24 m-4 max-w-screen-2xl w-full">
+        <div className="flex flex-col gap-1">
+          <h1>My name is Brynley Llewellyn-Roux.</h1>
+          <h2>I am a software engineer based in Sydney, Australia.</h2>
+          <p>I have 6 years of programming experience and I&apos;m currently studying at the University of Technology Sydney.</p>
+          <h3>I am open to work.</h3>
+          <h2>You can check out more info about me by going to my GitHub <a href="https://github.com/brynblack"></a></h2>
+        </div>
+        <Image src="https://avatars.githubusercontent.com/u/49110391" alt="Profile Picture" className="rounded-full h-[192px] max-sm:hidden" width={192} height={192}/>
       </div>
-      <Image src="https://avatars.githubusercontent.com/u/49110391" alt="Profile Picture" className="rounded-full" width={192} height={192}/>
     </main>
   );
 }
