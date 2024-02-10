@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import Link from 'next/link'
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Link from 'next/link';
+import Image from 'next/image';
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -40,7 +41,7 @@ function NavBar() {
     <nav className="border-b border-neutral-800">
       <div className="flex justify-between items-center w-full p-8">
         <Link href="/">
-          <img src="/trans_flag.svg" alt="Transgender Flag" className="w-8 rounded"/>
+          <Image src="/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>
         <div className="flex gap-10">
           <Link href="/about">About</Link>
