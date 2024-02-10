@@ -1,9 +1,9 @@
 export default function Page() {
   return (
     <main>
-      <div className="flex flex-col gap-2 absolute bottom-0 m-8">
-        <h1>Welcome to <span>my website!</span></h1>
-        <h3>Made with love by Brynley 💜</h3>
+      <div className="flex flex-col gap-2 absolute bottom-0 m-12">
+        <h1 className="text-4xl font-semibold">Welcome to my website!</h1>
+        <h3 className="text-xl">Made with love by Brynley 💜</h3>
         <div className="flex gap-4 items-center *:w-6 *:grayscale">
           <a href="https://github.com/brynblack" aria-label="GitHub">
             <img src="/github.svg" alt="GitHub Logo"/>
