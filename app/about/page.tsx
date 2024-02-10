@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Page() {
   return (
     <main className="flex gap-24 m-4">
@@ -8,7 +10,7 @@ export default function Page() {
         <h3>I am open to work.</h3>
         <h2>You can check out more info about me by going to my GitHub <a href="https://github.com/brynblack"></a></h2>
       </div>
-      <img src="https://avatars.githubusercontent.com/u/49110391?v=4" alt="Profile Picture" className="w-48 rounded-full"/>
+      <Image src="https://avatars.githubusercontent.com/u/49110391" alt="Profile Picture" className="rounded-full" width={192} height={192}/>
     </main>
   );
 }
