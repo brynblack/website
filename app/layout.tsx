@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+<<<<<<< Updated upstream
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from 'next/link';
 import Image from 'next/image';
+=======
+<<<<<<< Updated upstream
+import { SpeedInsights } from "@vercel/speed-insights/next"
+=======
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Analytics } from '@vercel/analytics/react';
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -26,12 +37,24 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <SpeedInsights/>
       </head>
+<<<<<<< Updated upstream
       <body className={rubik.className}>
         <NavBar/>
         {children}
       </body>
+=======
+<<<<<<< Updated upstream
+      <body className={inter.className}>{}</body>
+=======
+      <body className={rubik.className}>
+        <NavBar/>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </html>
   );
 }
