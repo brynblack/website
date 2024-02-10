@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main>
+    <main className="flex h-full">
       <div className="flex flex-col gap-2 absolute bottom-0 m-12">
         <h1 className="text-4xl font-semibold">Welcome to my website!</h1>
         <h3 className="text-xl">Made with love by Brynley 💜</h3>
