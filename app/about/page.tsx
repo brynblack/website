@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className="flex gap-24 m-4">
+    <main className="flex justify-between gap-24 m-4">
       <div className="flex flex-col gap-1">
         <h1>My name is Brynley Llewellyn-Roux.</h1>
         <h2>I am a software engineer based in Sydney, Australia.</h2>
