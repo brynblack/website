@@ -23,12 +23,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -39,7 +36,7 @@ body {
 
 @keyframes slide-right {
   from {
-    transform: translateX(-5%);
+    transform: translateX(-1rem);
     opacity: 0;
   }
 
@@ -51,7 +48,7 @@ body {
 
 .slideright {
   animation-name: slide-right;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-out;
 }
 
@@ -61,13 +58,21 @@ nav a {
   border-radius: 0.25rem;
 }
 
-nav a.active {
+nav a.active:has(.indicator) {
   color: rgb(var(--foreground-rgb-rough));
+  height: 2rem;
 }
 
-nav a:hover {
+.indicator {
+  position: relative;
+  transform: translateY(10px);
+}
+
+nav a.active>.indicator {
+  border-bottom: 1px solid rgb(var(--foreground-rgb-rough));
+}
+
+nav a:hover:has(.indicator) {
   background-color: rgb(50, 50, 50);
   color: white;
 }
-
-

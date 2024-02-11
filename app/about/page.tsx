@@ -11,7 +11,7 @@ export default function Page() {
           <p>I have 6 years of programming experience and I&apos;m currently working at Matrix AI.</p>
           <p>You can check out more info about me by going to my GitHub <a href="https://github.com/brynblack" className="text-pink-400">here</a>.</p>
         </div>
-        <Image src="/misc/pfp.png" alt="Profile Picture" className="rounded-full h-[192px] max-sm:hidden" width={192} height={192}/>
+        <Image src="/misc/pfp.png" alt="Profile Picture" className="rounded-full h-[192px] max-sm:hidden shadow-xl" width={192} height={192}/>
       </div>
       <div className="flex justify-between items-center gap-12 max-w-screen-xl w-full">
         <Image src="/misc/icons.svg" width={554} height={161} className="max-lg:hidden" alt="Grid of Programming Languages"/>

@@ -17,11 +17,21 @@ export default function NavBar() {
           <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>
         <div className="flex max-sm:hidden">
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/about') })} href="/about">About</Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/projects') })} href="/projects">Projects</Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/contact') })} href="/contact">Contact</Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/"><LinkName route="Home"/></Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/about') })} href="/about"><LinkName route="About"/></Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/projects') })} href="/projects"><LinkName route="Projects"/></Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/blog') })} href="/blog"><LinkName route="Blog"/></Link>
         </div>
       </div>
     </nav>
+  );
+}
+
+function LinkName(props: {route: string}) {
+  return (
+    <>
+      {props.route}
+      <div className="indicator" />
+    </>
   );
 }
