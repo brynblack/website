@@ -7,7 +7,18 @@ import classNames from "classnames";
 
 const isCurrentRoute = (current: string, href: string) => current === href;
 
-export default function NavBar() {
+const LinkName = (props: {
+  route: string
+}) => {
+  return (
+    <>
+      {props.route}
+      <div className="indicator" />
+    </>
+  );
+};
+
+const NavBar = () => {
   const pathname = usePathname();
 
   return (
@@ -16,22 +27,24 @@ export default function NavBar() {
         <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/">
           <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>
-        <div className="flex max-sm:hidden">
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/"><LinkName route="Home"/></Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/about') })} href="/about"><LinkName route="About"/></Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/projects') })} href="/projects"><LinkName route="Projects"/></Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/blog') })} href="/blog"><LinkName route="Blog"/></Link>
+        <div className="nav-links flex max-sm:hidden">
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/">
+            <LinkName route="Home" />
+          </Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/about') })} href="/about">
+            <LinkName route="About" />
+          </Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/projects') })} href="/projects">
+            <LinkName route="Projects"/>
+          </Link>
+          <Link className={classNames({ active: isCurrentRoute(pathname, '/blog') })} href="/blog">
+            <LinkName route="Blog"/>
+          </Link>
         </div>
       </div>
     </nav>
   );
-}
+};
 
-function LinkName(props: {route: string}) {
-  return (
-    <>
-      {props.route}
-      <div className="indicator" />
-    </>
-  );
-}
+export default NavBar;
+

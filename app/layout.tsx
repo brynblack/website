@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
-import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
 import NavBar from "./navbar";
+import "./globals.css";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: "My personal website.",
 };
 
-export default function RootLayout({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <head>
@@ -27,7 +27,7 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body className={rubik.className + " flex flex-col w-dvh h-dvh"}>
+      <body className={`${rubik.className} flex flex-col w-dvh h-dvh`}>
         <NavBar />
         {children}
         <SpeedInsights />
@@ -35,5 +35,7 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default Layout;
 

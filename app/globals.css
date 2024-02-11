@@ -52,13 +52,13 @@ body {
   animation-timing-function: ease-out;
 }
 
-nav a {
+.nav-links a {
   transition-duration: 100ms;
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
 }
 
-nav a.active:has(.indicator) {
+.nav-links a.active:has(.indicator) {
   color: rgb(var(--foreground-rgb-rough));
   height: 2rem;
 }
@@ -68,11 +68,11 @@ nav a.active:has(.indicator) {
   transform: translateY(10px);
 }
 
-nav a.active>.indicator {
+.nav-links a.active>.indicator {
   border-bottom: 1px solid rgb(var(--foreground-rgb-rough));
 }
 
-nav a:hover:has(.indicator) {
+.nav-links a:hover:has(.indicator) {
   background-color: rgb(50, 50, 50);
   color: white;
 }
