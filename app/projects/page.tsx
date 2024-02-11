@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { Card, Content, GridLayout, Title } from "../components";
 
-const Home = () => {
+export const metadata: Metadata = {
+  title: "Brynley's Website! | Projects",
+  description: "Cool things I've made!",
+};
+
+const Projects = () => {
   return (
     <Content>
       <Title>My Projects</Title>
@@ -29,10 +35,18 @@ const Home = () => {
           name="modder-bot"
           desc="A discord.py moderation bot."
         />
+        <Card
+          name="funwithnumbers"
+          desc="A reverse engineering school assignment in C++."
+        />
+        <Card
+          name="timestop"
+          desc="A Minecraft datapack that can freeze time."
+        />
       </GridLayout>
-      <p>... And more! You can go to my <a href="https://github.com/brynblack" className="text-pink-400">GitHub</a> to see more projects.</p>
+      <p className="text-center">...and more! You can go to my <a href="https://github.com/brynblack" className="text-pink-400">GitHub</a> to see more of my work.</p>
     </Content>
   );
 };
 
-export default Home;
+export default Projects;

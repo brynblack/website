@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
+import { useEffect, useState } from 'react';
 
 const isCurrentRoute = (current: string, href: string) => current === href;
 
@@ -21,9 +22,23 @@ const LinkName = (props: {
 const NavBar = () => {
   const pathname = usePathname();
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex justify-center border-b border-neutral-200 dark:border-neutral-800">
-      <div className="flex justify-between max-sm:justify-center items-center max-w-7xl w-full h-20 p-8">
+    <nav className={`z-50 flex bg-[--background] ${scrolling ? 'shadow-xl' : ''} fixed w-full justify-center border-b border-neutral-200 dark:border-neutral-800`}>
+      <div className="flex justify-between items-center max-w-7xl w-full h-20 p-8">
         <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/">
           <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
         </Link>

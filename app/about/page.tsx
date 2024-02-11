@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
 import { Content, ContentImage, TextColumn, Title } from '../components';
+
+export const metadata: Metadata = {
+  title: "Brynley's Website! | About",
+  description: "Cool things about me!",
+};
 
 const About = () => {
   return (

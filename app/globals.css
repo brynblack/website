@@ -3,29 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 100, 100, 100;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-
-  --foreground-rgb-rough: 0, 0, 0;
+  --foreground: #646464;
+  --foreground-rough: black;
+  --background: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 0, 0, 0;
-    --foreground-rgb: 175, 175, 175;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --foreground-rgb-rough: 255, 255, 255;
+    --foreground: #afafaf;
+    --foreground-rough: white;
+    --background: black;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  color: var(--foreground);
+  background: var(--background);
 }
 
 @layer utilities {
@@ -59,7 +52,7 @@ body {
 }
 
 .nav-links a.active:has(.indicator) {
-  color: rgb(var(--foreground-rgb-rough));
+  color: var(--foreground-rough);
   height: 2rem;
 }
 
@@ -69,7 +62,7 @@ body {
 }
 
 .nav-links a.active>.indicator {
-  border-bottom: 1px solid rgb(var(--foreground-rgb-rough));
+  border-bottom: 1px solid var(--foreground-rough);
 }
 
 .nav-links a:hover:has(.indicator) {
