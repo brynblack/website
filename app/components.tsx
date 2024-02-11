@@ -5,7 +5,7 @@ const fira_code = Fira_Code({ subsets: ["latin"] });
 export const Title = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) => {
   return (
     <h1 className="font-bold text-4xl pt-4">
@@ -17,7 +17,7 @@ export const Title = ({
 export const Content = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) => {
   return (
     <main className="flex flex-col items-center max-sm:p-4 max-sm:pt-24 p-8 pt-24 gap-12 slideright ease-out transition-all duration-500">
@@ -29,7 +29,7 @@ export const Content = ({
 export const ContentImage = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) => {
   return (
     <div className="flex max-md:flex-col max-md:flex-wrap justify-between items-center gap-12 max-w-screen-xl w-full">
@@ -41,7 +41,7 @@ export const ContentImage = ({
 export const TextColumn = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) => {
   return (
     <div className="flex flex-col gap-2 *:text-xl">
@@ -53,7 +53,7 @@ export const TextColumn = ({
 export const GridLayout = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) => {
   return (
     <div className="grid grid-cols-2 max-sm:flex max-sm:flex-wrap max-sm:*:w-full gap-4 max-w-screen-xl w-full">
