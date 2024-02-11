@@ -20,7 +20,7 @@ export const Content = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <main className="flex flex-col items-center p-8 gap-12 slideright">
+    <main className="flex flex-col items-center max-sm:p-4 max-sm:pt-24 p-8 pt-24 gap-12 slideright ease-out transition-all duration-500">
       {children}
     </main>
   );
@@ -56,7 +56,7 @@ export const GridLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="grid grid-cols-2 gap-8 max-w-screen-xl w-full">
+    <div className="grid grid-cols-2 max-sm:flex max-sm:flex-wrap max-sm:*:w-full gap-4 max-w-screen-xl w-full">
       {children}
     </div>
   );
