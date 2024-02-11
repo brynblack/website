@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Card, Content, GridLayout, Title } from "../components";
+import { Card, Content, GridLayout } from "../components";
 
 export const metadata: Metadata = {
   title: "Brynley's Website! | Projects",
@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 const Projects = () => {
   return (
     <Content>
-      <Title>My Projects</Title>
       <GridLayout>
         <Card
           name="ole"

@@ -8,17 +8,6 @@ import { useEffect, useState } from 'react';
 
 const isCurrentRoute = (current: string, href: string) => current === href;
 
-const LinkName = (props: {
-  route: string
-}) => {
-  return (
-    <>
-      {props.route}
-      <div className="indicator max-sm:hidden" />
-    </>
-  );
-};
-
 const Menu = ({
   children,
 }: Readonly<{
@@ -29,6 +18,12 @@ const Menu = ({
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [ pathname ]);
 
   return (
     <div>
@@ -42,9 +37,27 @@ const Menu = ({
   );
 };
 
+const Route = ({
+  children,
+  name,
+  path,
+}: Readonly<{
+  children?: React.ReactNode;
+  name: string;
+  path: string;
+}>) => {
+  const pathname = usePathname();
+
+  return (
+    <Link className={classNames({ active: isCurrentRoute(pathname, path) })} href={path}>
+      {name}
+      {children}
+      <div className="indicator max-sm:hidden" />
+    </Link>
+  );
+};
 
 const NavBar = () => {
-  const pathname = usePathname();
 
   const [scrolling, setScrolling] = useState(false);
 
@@ -60,25 +73,24 @@ const NavBar = () => {
     };
   }, []);
 
+  const pathname = usePathname();
+
   return (
     <nav className={`z-50 flex bg-[--background] ${scrolling ? 'shadow-xl' : ''} fixed w-full justify-center border-b border-neutral-200 dark:border-neutral-800`}>
       <div className="flex justify-between items-center max-w-7xl w-full h-20 p-8">
-        <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/">
-          <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
-        </Link>
+        <Route name="" path="/">
+          <div className="max-sm:hidden">
+            <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
+          </div>
+          <div className="sm:hidden">
+            {pathname}
+          </div>
+        </Route>
         <Menu>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/') })} href="/">
-            <LinkName route="Home" />
-          </Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/about') })} href="/about">
-            <LinkName route="About" />
-          </Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/projects') })} href="/projects">
-            <LinkName route="Projects"/>
-          </Link>
-          <Link className={classNames({ active: isCurrentRoute(pathname, '/blog') })} href="/blog">
-            <LinkName route="Blog"/>
-          </Link>
+          <Route name="Home" path="/" />
+          <Route name="About" path="/about" />
+          <Route name="Projects" path="/projects" />
+          <Route name="Blog" path="/blog" />
         </Menu>
       </div>
     </nav>
