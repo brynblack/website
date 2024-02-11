@@ -73,18 +73,11 @@ const NavBar = () => {
     };
   }, []);
 
-  const pathname = usePathname();
-
   return (
     <nav className={`z-50 flex bg-[--background] ${scrolling ? 'shadow-xl' : ''} fixed w-full justify-center border-b border-neutral-200 dark:border-neutral-800`}>
       <div className="flex justify-between items-center max-w-7xl w-full h-20 p-8">
         <Route name="" path="/">
-          <div className="max-sm:hidden">
-            <Image src="/misc/trans_flag.svg" alt="Transgender Flag" width={32} height={32} className="rounded"/>
-          </div>
-          <div className="sm:hidden">
-            {pathname}
-          </div>
+          | brynblack |
         </Route>
         <Menu>
           <Route name="Home" path="/" />
