@@ -32,7 +32,7 @@ export const ContentImage = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="flex justify-between items-center gap-12 max-w-screen-xl w-full">
+    <div className="flex max-md:flex-col max-md:flex-wrap justify-between items-center gap-12 max-w-screen-xl w-full">
       {children}
     </div>
   );
