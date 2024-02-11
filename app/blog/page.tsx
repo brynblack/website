@@ -1,7 +1,11 @@
-export default function Page() {
+import { Content, Title } from "../components";
+
+const Blog = () => {
   return (
-    <main className="flex flex-col items-center p-8 gap-12 slideright">
-      <h1 className="font-bold text-4xl pt-4">Blog</h1>
-    </main>
+    <Content>
+      <Title>My Blog</Title>
+    </Content>
   );
-}
+};
+
+export default Blog;
