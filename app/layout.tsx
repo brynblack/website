@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
-import NavBar from "./navbar";
+import NavBar from "@/components/navbar";
 import "./globals.css";
 
 const rubik = Rubik({ subsets: ["latin"] });

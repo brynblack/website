@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <div className="grid place-items-center w-dvw h-dvh slideright">
+    <div className="grid place-items-center w-full h-full slideright">
       <div className="flex flex-col gap-4 items-center justify-center duration-100">
         <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>

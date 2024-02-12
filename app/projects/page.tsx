@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Card, Content, GridLayout } from "../components";
+import { Card, Content, GridLayout } from "@/components/components";
 
 export const metadata: Metadata = {
   title: "Brynley's Website! | Projects",
