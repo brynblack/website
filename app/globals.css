@@ -39,10 +39,27 @@ body {
   }
 }
 
+@keyframes spin-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+    transform: rotateZ(-180deg);
+  }
+}
+
 .slideright {
   animation-name: slide-right;
   animation-duration: 0.75s;
   animation-timing-function: ease-out;
+}
+
+.spinin {
+  animation-name: spin-in;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
 }
 
 .nav-links a {
@@ -68,4 +85,11 @@ body {
 .nav-links a:hover:has(.indicator) {
   background-color: rgb(50, 50, 50);
   color: white;
+}
+
+@media not all and (min-width: 640px) {
+  .nav-links a:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
 }

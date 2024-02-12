@@ -27,8 +27,9 @@ const Menu = ({
 
   return (
     <div>
-      <button onClick={toggleMenu} className="hidden max-sm:block">
-        <Image src="misc/hamburger.svg" alt="Menu" width={32} height={32} className="dark:invert" />
+      <button onClick={toggleMenu} className={`${isOpen ? "spinin" : ""} w-7 hidden max-sm:block`}>
+        <Image src="misc/hamburger.svg" alt="Menu" width={32} height={32} className={`${isOpen ? "hidden" : ""} dark:invert`} />
+        <Image src="misc/downarrow.svg" alt="Menu" width={32} height={32} className={`${isOpen ? "" : "hidden"} rotate-180 dark:invert`} />
       </button>
       <div className={`nav-links flex max-sm:flex-col max-sm:fixed max-sm:top-[80px] max-sm:right-0 max-sm:w-full max-sm:bg-[--background] max-sm:last:shadow-xl max-sm:last:rounded-b-3xl max-sm:*:hover:rounded-none max-sm:*:!h-12 max-sm:*:flex max-sm:*:items-center max-sm:*:justify-center ${isOpen ? "max-sm:flex" : "max-sm:hidden"}`}>
         {children}
