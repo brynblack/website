@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from 'next/image';
-import { Content, ContentImage, TextColumn } from '../components';
+import { Content, ContentImage, TextColumn } from '@/components/components';
+import { Suspense } from "react";
+import Loading from "../loading";
 
 export const metadata: Metadata = {
   title: "Brynley's Website! | About",
@@ -17,10 +19,14 @@ const About = () => {
           <p>I have 6 years of programming experience and I&apos;m currently working at Matrix AI.</p>
           <p>You can check out more info about me by going to my GitHub <a href="https://github.com/brynblack" className="text-pink-400">here</a>.</p>
         </TextColumn>
-        <Image src="/misc/pfp.png" alt="Profile Picture" width={192} height={192} className="rounded-full h-[192px] shadow-xl" />
+        <Suspense fallback={ <Loading /> }>
+          <Image src="/misc/pfp.png" alt="Profile Picture" width={192} height={192} className="rounded-full h-[192px] shadow-xl" />
+        </Suspense>
       </ContentImage>
       <ContentImage>
-        <Image src="/misc/icons.svg" width={554} height={161} className="" alt="Grid of Programming Languages"/>
+        <Suspense fallback={ <Loading /> }>
+          <Image src="/misc/icons.svg" width={554} height={161} className="" alt="Grid of Programming Languages"/>
+        </Suspense>
         <TextColumn>
           <p>These are just some of my skills.</p>
           <p>I have a very diverse skillset, ranging from web-based applications to low level embedded systems!</p>
@@ -33,7 +39,9 @@ const About = () => {
           <p>I believe all software should be free and open source, so my commitment to this is to keep all of my projects such as this website open source.</p>
           <p>Speaking of, if you would like to see the source code for this website, head to <a href="https://github.com/brynblack/website" className="text-pink-400">this link</a>.</p>
         </TextColumn>
-        <Image src="/socials/github.svg" alt="GitHub Logo" width={192} height={192} className="rounded-full h-[192px] dark:invert" />
+        <Suspense fallback={ <Loading /> }>
+          <Image src="/socials/github.svg" alt="GitHub Logo" width={192} height={192} className="rounded-full h-[192px] dark:invert" />
+        </Suspense>
       </ContentImage>
     </Content>
   );
