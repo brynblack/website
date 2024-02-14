@@ -64,13 +64,13 @@ body {
 
 .nav-links a {
   transition-duration: 100ms;
+  transition-property: background-color;
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
 }
 
 .nav-links a.active:has(.indicator) {
   color: var(--foreground-rough);
-  height: 2rem;
 }
 
 .indicator {
@@ -89,7 +89,17 @@ body {
 
 @media not all and (min-width: 640px) {
   .nav-links a:last-child {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .nav-links a {
+    transition-property: all;
+  }
+}
+
+@media not all and (max-width: 640px) {
+  .nav-links a.active:has(.indicator) {
+    height: 2rem;
   }
 }

@@ -36,7 +36,7 @@ const About = () => {
             alt="Profile Picture"
             width={192}
             height={192}
-            className="rounded-full h-[192px] shadow-xl"
+            className="rounded-full max-h-[192px] shadow-xl"
           />
         </Suspense>
       </ContentImage>
