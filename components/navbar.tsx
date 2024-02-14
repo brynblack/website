@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const isCurrentRoute = (current: string, href: string) => current === href;
 
@@ -23,15 +23,32 @@ const Menu = ({
 
   useEffect(() => {
     setIsOpen(false);
-  }, [ pathname ]);
+  }, [pathname]);
 
   return (
     <div>
-      <button onClick={toggleMenu} className={`${isOpen ? "spinin" : ""} w-7 hidden max-sm:block`}>
-        <Image src="misc/hamburger.svg" alt="Menu" width={32} height={32} className={`${isOpen ? "hidden" : ""} dark:invert`} />
-        <Image src="misc/downarrow.svg" alt="Menu" width={32} height={32} className={`${isOpen ? "" : "hidden"} rotate-180 dark:invert`} />
+      <button
+        onClick={toggleMenu}
+        className={`${isOpen ? "spinin" : ""} w-7 hidden max-sm:block`}
+      >
+        <Image
+          src="misc/hamburger.svg"
+          alt="Menu"
+          width={32}
+          height={32}
+          className={`${isOpen ? "hidden" : ""} dark:invert`}
+        />
+        <Image
+          src="misc/downarrow.svg"
+          alt="Menu"
+          width={32}
+          height={32}
+          className={`${isOpen ? "" : "hidden"} rotate-180 dark:invert`}
+        />
       </button>
-      <div className={`nav-links flex max-sm:flex-col max-sm:fixed max-sm:top-[80px] max-sm:right-0 max-sm:w-full max-sm:bg-[--background] max-sm:last:shadow-xl max-sm:last:rounded-b-3xl max-sm:*:hover:rounded-none max-sm:*:!h-12 max-sm:*:flex max-sm:*:items-center max-sm:*:justify-center ${isOpen ? "max-sm:flex" : "max-sm:hidden"}`}>
+      <div
+        className={`nav-links flex max-sm:flex-col max-sm:fixed max-sm:top-[80px] max-sm:right-0 max-sm:w-full max-sm:bg-[--background] max-sm:last:shadow-xl max-sm:last:rounded-b-3xl max-sm:*:hover:rounded-none max-sm:*:!h-12 max-sm:*:flex max-sm:*:items-center max-sm:*:justify-center ${isOpen ? "max-sm:flex" : "max-sm:hidden"}`}
+      >
         {children}
       </div>
     </div>
@@ -50,7 +67,10 @@ const Route = ({
   const pathname = usePathname();
 
   return (
-    <Link className={classNames({ active: isCurrentRoute(pathname, path) })} href={path}>
+    <Link
+      className={classNames({ active: isCurrentRoute(pathname, path) })}
+      href={path}
+    >
       {name}
       {children}
       <div className="indicator max-sm:hidden" />
@@ -59,7 +79,6 @@ const Route = ({
 };
 
 const NavBar = () => {
-
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -67,15 +86,17 @@ const NavBar = () => {
       setScrolling(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className={`z-50 flex bg-[--background] ${scrolling ? 'shadow-xl' : ''} fixed w-full justify-center border-b border-neutral-200 dark:border-neutral-800`}>
+    <nav
+      className={`z-50 flex bg-[--background] ${scrolling ? "shadow-xl" : ""} fixed w-full justify-center border-b border-neutral-200 dark:border-neutral-800`}
+    >
       <div className="flex justify-between items-center max-w-7xl w-full h-20 p-8">
         <Route name="" path="/">
           | brynblack |
@@ -92,4 +113,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

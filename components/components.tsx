@@ -7,11 +7,7 @@ export const Title = ({
 }: Readonly<{
   children?: React.ReactNode;
 }>) => {
-  return (
-    <h1 className="font-bold text-4xl pt-4">
-      {children}
-    </h1>
-  );
+  return <h1 className="font-bold text-4xl pt-4">{children}</h1>;
 };
 
 export const Content = ({
@@ -32,7 +28,7 @@ export const ContentImage = ({
   children?: React.ReactNode;
 }>) => {
   return (
-    <div className="flex max-md:flex-col max-md:flex-wrap justify-between items-center gap-12 max-w-screen-xl w-full">
+    <div className="flex max-sm:flex-col max-sm:flex-wrap justify-between items-center gap-12 max-w-screen-xl w-full">
       {children}
     </div>
   );
@@ -43,11 +39,7 @@ export const TextColumn = ({
 }: Readonly<{
   children?: React.ReactNode;
 }>) => {
-  return (
-    <div className="flex flex-col gap-2 *:text-xl">
-      {children}
-    </div>
-  );
+  return <div className="flex flex-col gap-2 *:text-xl">{children}</div>;
 };
 
 export const GridLayout = ({
@@ -62,19 +54,14 @@ export const GridLayout = ({
   );
 };
 
-export const Card = (props: {
-  name: string,
-  desc: string,
-}) => {
+export const Card = (props: { name: string; desc: string }) => {
   return (
-    <a href={`https://github.com/brynblack/${props.name}`} className="border border-neutral-200 dark:border-neutral-800 dark:hover:border-white rounded-lg h-36 p-4 flex flex-col justify-end transition-border duration-100 shadow hover:shadow-xl">
-      <span className={`${fira_code.className} font-bold`}>
-        {props.name}
-      </span>
-      <span>
-        {props.desc}
-      </span>
+    <a
+      href={`https://github.com/brynblack/${props.name}`}
+      className="border border-neutral-200 dark:border-neutral-800 dark:hover:border-white rounded-lg h-36 p-4 flex flex-col justify-end transition-border duration-100 shadow hover:shadow-xl"
+    >
+      <span className={`${fira_code.className} font-bold`}>{props.name}</span>
+      <span>{props.desc}</span>
     </a>
   );
 };
-
