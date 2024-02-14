@@ -78,7 +78,7 @@ body {
   transform: translateY(10px);
 }
 
-.nav-links a.active>.indicator {
+.nav-links a.active > .indicator {
   border-bottom: 1px solid var(--foreground-rough);
 }
 
