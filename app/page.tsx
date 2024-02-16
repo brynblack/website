@@ -25,7 +25,7 @@ const Home = () => {
               height={24}
             />
           </a>
-          <a href="https://tech.lgbt/@brynblack" aria-label="Mastodon">
+          <a href="https://tech.lgbt/@brynblack" aria-label="Mastodon" rel="me">
             <Image
               src="/socials/mastodon.svg"
               alt="Mastodon Logo"
