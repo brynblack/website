@@ -12,19 +12,19 @@ const Projects = () => {
       <GridLayout>
         <Card name="ole" desc="A fast, scalable online learning platform." />
         <Card name="chess" desc="A Rust implementation of Chess." />
-        <Card name="cubicspeed" desc="A C++ OpenGL game I made for fun." />
+        <Card name="voxelaria" desc="An open world voxel playground." />
         <Card
           name="realisticcraft"
           desc="A Minecraft modpack that makes the game realistic."
         />
         <Card
           name="transdotfiles"
-          desc="My personal config files for my devices."
+          desc="My personal config files."
         />
         <Card name="modder-bot" desc="A discord.py moderation bot." />
         <Card
           name="funwithnumbers"
-          desc="A reverse engineering school assignment in C++."
+          desc="A reverse engineering project in C++."
         />
         <Card
           name="timestop"
