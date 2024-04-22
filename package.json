@@ -9,13 +9,17 @@
     "lint": "bunx oxlint --fix; bunx prettier . --write"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.42.5",
     "@vercel/analytics": "^1.1.3",
     "@vercel/speed-insights": "^1.0.9",
     "classnames": "^2.5.1",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.1.0",
     "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "supabase": "^1.163.2"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
