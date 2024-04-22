@@ -17,10 +17,7 @@ const Projects = () => {
           name="realisticcraft"
           desc="A Minecraft modpack that makes the game realistic."
         />
-        <Card
-          name="transdotfiles"
-          desc="My personal config files."
-        />
+        <Card name="transdotfiles" desc="My personal config files." />
         <Card name="modder-bot" desc="A discord.py moderation bot." />
         <Card
           name="funwithnumbers"
