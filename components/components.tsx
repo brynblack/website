@@ -54,10 +54,12 @@ export const GridLayout = ({
   );
 };
 
-export const Card = (props: { name: string; desc: string }) => {
+export const Card = (props: { name: string; desc: string; url?: string }) => {
   return (
     <a
-      href={`https://github.com/brynblack/${props.name}`}
+      href={
+        props.url ? props.url : `https://github.com/brynblack/${props.name}`
+      }
       className="border border-neutral-200 dark:border-neutral-800 dark:hover:border-white rounded-lg h-36 p-4 flex flex-col justify-end transition-border duration-100 shadow hover:shadow-xl"
     >
       <span className={`${fira_code.className} font-bold`}>{props.name}</span>

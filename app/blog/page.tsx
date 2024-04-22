@@ -1,28 +1,45 @@
 import type { Metadata } from "next";
 import { createClient } from "@supabase/supabase-js";
-import { Content } from "@/components/components";
+import { Card, Content, GridLayout } from "@/components/components";
 
-require('dotenv').config();
+require("dotenv").config();
 
 export const metadata: Metadata = {
   title: "Brynley's Website! | Blog",
   description: "Keep in touch with what's happening.",
 };
 
-async function Notes() {
-  const supabase = createClient(process.env.SUPABASE_URL ?? "", process.env.SUPABASE_ANON_KEY ?? "");
+const Posts = async () => {
+  const supabase = createClient(
+    process.env.SUPABASE_URL ?? "",
+    process.env.SUPABASE_ANON_KEY ?? "",
+  );
 
-  const { data: posts } = await supabase.from("posts").select();
+  const { data } = await supabase.from("posts").select();
 
-  return <pre>{JSON.stringify(posts, null, 2)}</pre>
-}
+  const posts = data?.map((post) => {
+    return (
+      <pre>
+        <Card
+          name={post.title}
+          desc={post.description}
+          url={`/blog/${post.id}`}
+        />
+      </pre>
+    );
+  });
+
+  return posts;
+};
 
 const Blog = () => {
   return (
     <Content>
-      <Notes/>
+      <GridLayout>
+        <Posts />
+      </GridLayout>
     </Content>
-  )
+  );
 };
 
 export default Blog;
