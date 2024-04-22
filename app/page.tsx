@@ -1,9 +1,20 @@
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const Home = () => {
   return (
-    <main className="flex h-full">
-      <div className="flex flex-col gap-2 absolute bottom-0 m-12 max-sm:m-8 max-sm:ml-4 slideright">
+    <main className="flex flex-col items-center max-sm:p-4 max-sm:pt-24 p-8 pt-56 gap-12 slideright ease-out transition-all duration-500">
+      <Suspense fallback={<Loading />}>
+        <Image
+          src="/misc/pfp.png"
+          alt="GitHub Logo"
+          width={384}
+          height={384}
+          className="rounded-full max-h-[384px] shadow-xl"
+        />
+      </Suspense>
+      <div className="flex flex-col items-center gap-2 max-sm:m-8 max-sm:ml-4 slideright">
         <h1 className="text-4xl max-sm:text-2xl font-medium">
           Welcome to my website!
         </h1>
