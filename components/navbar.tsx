@@ -6,7 +6,11 @@ import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
-const isCurrentRoute = (current: string, href: string) => current === href;
+const isCurrentRoute = (current: string, href: string) => {
+  const currentBaseRoute = current.split("/")[1];
+  const hrefBaseRoute = href.split("/")[1];
+  return currentBaseRoute === hrefBaseRoute;
+};
 
 const Menu = ({
   children,
