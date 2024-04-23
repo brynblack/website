@@ -32,14 +32,14 @@ const Menu = ({
         className={`${isOpen ? "spinin" : ""} w-7 hidden max-sm:block`}
       >
         <Image
-          src="misc/hamburger.svg"
+          src="/misc/hamburger.svg"
           alt="Menu"
           width={32}
           height={32}
           className={`${isOpen ? "hidden" : ""} dark:invert`}
         />
         <Image
-          src="misc/downarrow.svg"
+          src="/misc/downarrow.svg"
           alt="Menu"
           width={32}
           height={32}
