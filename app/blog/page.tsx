@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { createClient } from "@supabase/supabase-js";
 import { Card, Content, GridLayout } from "@/components/components";
-
-require("dotenv").config();
+import { createClient } from "@/utils/supabase/server";
 
 export const metadata: Metadata = {
   title: "Brynley's Website! | Blog",
@@ -10,10 +8,7 @@ export const metadata: Metadata = {
 };
 
 const Posts = async () => {
-  const supabase = createClient(
-    process.env.SUPABASE_URL ?? "",
-    process.env.SUPABASE_ANON_KEY ?? "",
-  );
+  const supabase = createClient();
 
   const { data } = await supabase.from("posts").select();
 
