@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Card, Content, GridLayout } from "@/components/components";
 import { createClient } from "@/utils/supabase/server";
 
+export const revalidate = 30;
+
 export const metadata: Metadata = {
   title: "Brynley's Website! | Blog",
   description: "Keep in touch with what's happening.",
