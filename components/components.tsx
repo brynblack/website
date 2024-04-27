@@ -1,4 +1,5 @@
 import { Fira_Code } from "next/font/google";
+import Link from "next/link";
 
 const fira_code = Fira_Code({ subsets: ["latin"] });
 
@@ -56,7 +57,7 @@ export const GridLayout = ({
 
 export const Card = (props: { name: string; desc: string; url?: string }) => {
   return (
-    <a
+    <Link
       href={
         props.url ? props.url : `https://github.com/brynblack/${props.name}`
       }
@@ -64,6 +65,6 @@ export const Card = (props: { name: string; desc: string; url?: string }) => {
     >
       <span className={`${fira_code.className} font-bold`}>{props.name}</span>
       <span>{props.desc}</span>
-    </a>
+    </Link>
   );
 };

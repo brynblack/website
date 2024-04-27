@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Card, Content, GridLayout } from "@/components/components";
-import { createClient } from "@/utils/supabase/server";
+import supabase from "@/utils/supabase/server";
+import React from "react";
 
 export const revalidate = 30;
 
@@ -10,23 +11,19 @@ export const metadata: Metadata = {
 };
 
 const Posts = async () => {
-  const supabase = createClient();
+  const { data: posts } = await supabase.from("posts").select();
 
-  const { data } = await supabase.from("posts").select();
-
-  const posts = data?.map((post) => {
+  return posts?.map((post) => {
     return (
-      <pre>
+      <React.Fragment key={post.id}>
         <Card
           name={post.title}
           desc={post.description}
           url={`/blog/${post.id}`}
         />
-      </pre>
+      </React.Fragment>
     );
   });
-
-  return posts;
 };
 
 const Blog = () => {
