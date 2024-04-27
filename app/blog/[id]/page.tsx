@@ -1,5 +1,5 @@
 import { Content } from "@/components/components";
-import { createClient } from "@/utils/supabase/server";
+import supabase from "@/utils/supabase/server";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,14 +8,18 @@ import React from "react";
 export const revalidate = 30;
 
 type Props = {
-  params: { slug: string };
+  params: { id: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const supabase = createClient();
-  const { data } = await supabase.from("posts").select().eq("id", params.slug);
-  const post = data?.at(0);
-  if (!post) return notFound();
+export async function generateMetadata({
+  params: { id },
+}: Props): Promise<Metadata> {
+  const { data: post } = await supabase
+    .from("posts")
+    .select()
+    .match({ id })
+    .single();
+  if (!post) notFound();
 
   return {
     title: `Brynley's Website! | Blog | ${post.title}`,
@@ -23,11 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-  const supabase = createClient();
-  const { data } = await supabase.from("posts").select().eq("id", params.slug);
-  const post = data?.at(0);
-  if (!post) return notFound();
+const Page = async ({ params: { id } }: Props) => {
+  const { data: post } = await supabase
+    .from("posts")
+    .select()
+    .match({ id })
+    .single();
+  if (!post) notFound();
 
   return (
     <Content>
