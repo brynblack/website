@@ -15,7 +15,8 @@ const About = () => {
       <ContentImage>
         <TextColumn>
           <p className="!text-3xl font-medium">
-            My name is Brynley Llewellyn-Roux.
+            My name is{" "}
+            <span className="text-pink-300">Brynley Llewellyn-Roux.</span>
           </p>
           <p>I am a software engineer based in Sydney, Australia.</p>
           <p>
@@ -24,7 +25,10 @@ const About = () => {
           </p>
           <p>
             You can check out more info about me by going to my GitHub{" "}
-            <a href="https://github.com/brynblack" className="text-pink-400">
+            <a
+              href="https://github.com/brynblack"
+              className="text-pink-300 underline"
+            >
               here
             </a>
             .
@@ -51,12 +55,15 @@ const About = () => {
           />
         </Suspense>
         <TextColumn>
-          <p>These are just some of my skills.</p>
           <p>
-            I have a very diverse skillset, ranging from web-based applications
-            to low level embedded systems!
+            I like to dabble a lot in various different technologies and
+            languages.
           </p>
-          <p>Currently my most used language is Rust.</p>
+          <p>
+            I enjoy working on many personal projects, and like to make cool
+            things.
+          </p>
+          <p>Currently my favourite and most-used language is Rust.</p>
         </TextColumn>
       </ContentImage>
       <ContentImage>
@@ -75,7 +82,7 @@ const About = () => {
             website, head to{" "}
             <a
               href="https://github.com/brynblack/website"
-              className="text-pink-400"
+              className="text-pink-300 underline"
             >
               this link
             </a>
