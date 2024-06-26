@@ -51,7 +51,7 @@ const Menu = ({
         />
       </button>
       <div
-        className={`nav-links flex max-sm:flex-col max-sm:fixed max-sm:top-[80px] max-sm:right-0 max-sm:w-full max-sm:bg-[--background] max-sm:last:shadow-xl max-sm:last:rounded-b-3xl max-sm:*:hover:rounded-none max-sm:*:flex max-sm:*:items-center max-sm:*:justify-center max-sm:transition-all ${isOpen ? "max-sm:flex max-sm:*:h-12" : "max-sm:*:h-0 max-sm:pointer-events-none max-sm:opacity-0 max-sm:invisible"}`}
+        className={`nav-links flex max-sm:flex-col max-sm:fixed max-sm:top-[80px] max-sm:right-0 max-sm:w-full max-sm:bg-[--background] max-sm:last:shadow-xl max-sm:last:rounded-b-3xl max-sm:*:hover:rounded-none max-sm:*:flex max-sm:*:items-center max-sm:*:justify-center max-sm:transition-all max-sm:*:h-12 max-sm:-translate-y-[96px] ${isOpen ? "max-sm:translate-y-[0px] max-sm:flex" : "max-sm:pointer-events-none max-sm:opacity-0 max-sm:invisible"}`}
       >
         {children}
       </div>
