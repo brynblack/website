@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Posts = async () => {
   const { data: posts } = await supabase.from("posts").select();
 
-  return posts?.map((post) => {
+  return posts?.map((post: any) => {
     return (
       <React.Fragment key={post.id}>
         <Card

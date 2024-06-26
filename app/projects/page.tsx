@@ -30,7 +30,10 @@ const Projects = () => {
       </GridLayout>
       <p className="text-center">
         ...and more! You can go to my{" "}
-        <a href="https://github.com/brynblack" className="text-pink-400">
+        <a
+          href="https://github.com/brynblack"
+          className="text-pink-300 underline"
+        >
           GitHub
         </a>{" "}
         to see more of my work.
