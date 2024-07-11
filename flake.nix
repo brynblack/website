@@ -12,7 +12,6 @@
           name = "env";
           nativeBuildInputs = [
             bun
-            nodejs
           ];
         };
       });
