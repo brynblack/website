@@ -1,11 +1,19 @@
 # website
 
-My personal website. [brynblack.me](https://brynblack.me)
+My personal website. Built using Nuxt.js, deployed using Vercel.
 
-## Deployment
+## Development
 
-This website is deployed using Vercel and Next.js.
+```sh
+nix develop
+```
+
+```sh
+bun install
+bun dev
+```
 
 ## License
 
-This repository is licensed under the MIT license. You can read more about it [here](./LICENSE.md).
+This repository is licensed under the MIT license. You may read the terms of the license [here](LICENSE).
+

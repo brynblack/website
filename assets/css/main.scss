@@ -1,0 +1,60 @@
+@import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+:root {
+  --bg: #1A1917;
+  --fg: white;
+
+  --accent: #f9a8d4;
+  --accent-dark: #2a2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url("public/img/background.jpg");
+  background-repeat: no-repeat;
+  background-position-x: calc(50% - 10rem);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  font-family: Comfortaa;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+  width: 100dvw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition-duration: 200ms;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--accent-dark);
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+
+  &:hover {
+    background: var(--accent); 
+  }
+}
+
