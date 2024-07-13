@@ -9,7 +9,6 @@
     <div />
     <div class="box">
       <span>Made with love 🩷</span>
-      <div></div>
     </div>
   </main>
 </template>

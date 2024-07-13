@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="content">
-      <NuxtLink to="/">| brynblack |</NuxtLink>
+      <NuxtLink class="header" to="/">| brynblack |</NuxtLink>
       <div class="links">
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
@@ -12,6 +12,16 @@
 </template>
 
 <style scoped>
+.router-link-exact-active {
+  color: var(--accent);
+}
+.header {
+  color: var(--fg);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
 nav {
   backdrop-filter: blur(16px);
   display: flex;
@@ -30,6 +40,11 @@ nav {
       display: flex;
       gap: 2rem;
     }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .header {
+    color: var(--bg);
   }
 }
 </style>

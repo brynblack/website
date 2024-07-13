@@ -28,6 +28,10 @@
 
     a {
       width: 1.75rem;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
     }
   }
 

@@ -9,7 +9,7 @@
       <img src="https://avatars.githubusercontent.com/u/49110391" class="pfp">
     </div>
     <div class="container">
-      <img src="public/img/icons.svg">
+      <img class="short" src="public/img/icons.svg">
       <div class="sub-cont">
         <p>I like to dabble a lot in various different technologies and languages.</p>
         <p>I enjoy working on many personal projects, and like to make cool things.</p>
@@ -33,7 +33,10 @@ main {
   gap: 1rem;
 }
 .pfp {
-  width: 12rem;  
+  width: 12rem;
+}
+.short {
+  width: 50%;
 }
 .container {
   display: flex;
@@ -51,6 +54,9 @@ main {
   }
 }
 @media screen and (max-width: 600px) {
+  .short {
+    width: 100%;
+  }
   .container {
     flex-direction: column;
   }
