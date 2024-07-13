@@ -41,7 +41,7 @@ main {
   justify-content: space-between;
   max-width: 80rem;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
 
   .sub-cont {
     display: flex;

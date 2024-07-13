@@ -16,9 +16,6 @@ html {
 
 body {
   background-color: var(--bg);
-  background-image: url("public/img/background.jpg");
-  background-repeat: no-repeat;
-  background-position-x: calc(50% - 10rem);
   color: var(--fg);
   display: flex;
   flex-direction: column;
@@ -28,6 +25,8 @@ body {
   overflow-y: scroll;
   text-align: center;
   width: 100dvw;
+  transition: background-color color;
+  transition-duration: 250ms;
 }
 
 a {
@@ -57,4 +56,12 @@ a {
     background: var(--accent); 
   }
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--fg);
+    color: var(--bg);
+  }
+}
+
 

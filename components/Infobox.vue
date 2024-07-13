@@ -34,13 +34,11 @@
   h1 {
     font-size: 2rem;
     font-weight: bold;
-    text-shadow: 1px 1px 8px var(--bg);
   }
 
   h2 {
     line-height: 2rem;
     font-weight: bold;
-    text-shadow: 1px 1px 8px var(--bg);
   }
 }
 </style>
