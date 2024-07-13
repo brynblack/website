@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Brynley!',
+  ogTitle: 'Brynley!',
+  description: 'My personal website.',
+  ogDescription: 'My personal website.',
+})
+</script>
+
 <template>
   <Navbar />
   <NuxtLoadingIndicator />
