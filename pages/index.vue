@@ -9,6 +9,7 @@
     <div />
     <div class="box">
       <span>Made with love 🩷</span>
+      <a class="link" href="https://github.com/brynblack/website">source code</a>
     </div>
   </main>
 </template>
@@ -41,7 +42,7 @@ main {
 .box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
   span {
     font-size: 2rem;
@@ -52,5 +53,10 @@ main {
     margin-top: 6rem;
     gap: 3rem;
   }
+  .box {
+    span {
+      font-size: 1.25rem;
+    }
+  } 
 }
 </style>

@@ -19,7 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  line-height: 0;
+  line-height: 1.25;
+  font-weight: bold;
 
   .socials {
     display: flex;
@@ -34,15 +35,10 @@
       }
     }
   }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  h2 {
-    line-height: 2rem;
-    font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .infobox {
+    font-size: 0.75rem;
   }
 }
 </style>

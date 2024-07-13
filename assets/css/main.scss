@@ -25,7 +25,7 @@ body {
   overflow-y: scroll;
   text-align: center;
   width: 100dvw;
-  transition: background-color color;
+  transition-property: background-color, color;
   transition-duration: 250ms;
 }
 
@@ -62,6 +62,14 @@ a {
     background-color: var(--fg);
     color: var(--bg);
   }
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.link:hover {
+  filter: brightness(115%)
 }
 
 
