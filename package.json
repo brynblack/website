@@ -6,6 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "prettier . --check",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -14,6 +15,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "prettier": "latest",
     "sass": "latest"
   }
 }

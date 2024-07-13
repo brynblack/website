@@ -4,19 +4,20 @@
       <NuxtLink class="header" to="/">| brynblack |</NuxtLink>
       <div class="links">
         <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/blog">Blog</NuxtLink>
       </div>
     </div>
   </nav>
-  <div class="spacer" />
 </template>
 
 <style scoped>
 .router-link-exact-active {
   color: var(--accent);
+  font-weight: bold;
 }
 .header {
   color: var(--fg);
+  font-weight: normal;
 
   &:hover {
     color: var(--accent);
@@ -32,7 +33,7 @@ nav {
   .content {
     display: flex;
     justify-content: space-between;
-    max-width: 75rem;
+    max-width: calc(var(--max-width) + 4rem);
     padding: 2rem;
     width: 100%;
 
