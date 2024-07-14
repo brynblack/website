@@ -110,6 +110,11 @@ hr {
   border: 1px dashed var(--accent-dark);
   max-width: var(--max-width);
 }
+.container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 @media (prefers-color-scheme: light) {
   hr {
     filter: invert();
