@@ -23,7 +23,11 @@ useSeoMeta({
             src="img/youtube.svg"
             href="https://www.youtube.com/@brynblack9433"
           />
-          <Social src="img/fedi.svg" href="https://woem.men/@brynblack" />
+          <Social
+            src="img/fedi.svg"
+            href="https://woem.men/@brynblack"
+            rel="me"
+          />
           <Social src="img/twitch.svg" href="https://twitch.tv/brynblack" />
           <Social
             src="img/steam.svg"
