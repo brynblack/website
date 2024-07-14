@@ -24,12 +24,12 @@ defineProps({
     gap: 1rem;
   }
 }
-.center {
-  align-items: center;
-}
 @media screen and (max-width: 600px) {
   .container {
     flex-direction: column;
   }
+}
+.center {
+  align-items: center;
 }
 </style>
