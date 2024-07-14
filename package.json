@@ -11,6 +11,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vercel/analytics": "latest",
+    "@vercel/speed-insights": "latest",
     "nuxt": "latest",
     "vue": "latest"
   },
