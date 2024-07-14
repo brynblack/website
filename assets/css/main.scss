@@ -29,6 +29,12 @@ body {
   transition-property: background-color, color;
   transition-duration: 250ms;
 }
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--fg);
+    color: var(--bg);
+  }
+}
 
 a {
   color: var(--accent);
@@ -54,12 +60,5 @@ a {
 
   &:hover {
     background: var(--accent);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--fg);
-    color: var(--bg);
   }
 }

@@ -38,6 +38,7 @@ nav {
       color: var(--accent);
       font-weight: bold;
     }
+
     .header {
       color: var(--fg);
       font-weight: normal;
@@ -47,15 +48,16 @@ nav {
       }
     }
 
+    @media (prefers-color-scheme: light) {
+      .header {
+        color: var(--bg);
+      }
+    }
+
     .links {
       display: flex;
       gap: 2rem;
     }
-  }
-}
-@media (prefers-color-scheme: light) {
-  .header {
-    color: var(--bg);
   }
 }
 </style>
