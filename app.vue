@@ -7,7 +7,6 @@ useHead({
 </script>
 
 <template>
-  <Navbar />
   <NuxtLoadingIndicator />
   <NuxtLayout>
     <NuxtPage />
