@@ -11,18 +11,6 @@
 </template>
 
 <style scoped>
-.router-link-exact-active {
-  color: var(--accent);
-  font-weight: bold;
-}
-.header {
-  color: var(--fg);
-  font-weight: normal;
-
-  &:hover {
-    color: var(--accent);
-  }
-}
 nav {
   backdrop-filter: blur(16px);
   display: flex;
@@ -36,6 +24,28 @@ nav {
     max-width: calc(var(--max-width) + 4rem);
     padding: 2rem;
     width: 100%;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    .router-link-exact-active {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .header {
+      color: var(--fg);
+      font-weight: normal;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
 
     .links {
       display: flex;
