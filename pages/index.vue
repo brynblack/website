@@ -35,10 +35,13 @@ useSeoMeta({
           />
         </Socials>
       </div>
-      <img src="https://avatars.githubusercontent.com/u/49110391" class="pfp" />
+      <NuxtImg
+        src="https://avatars.githubusercontent.com/u/49110391"
+        class="pfp"
+      />
     </Container>
     <Container center>
-      <img class="short" src="public/img/icons.svg" />
+      <NuxtImg class="short" src="img/icons.svg" />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
