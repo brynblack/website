@@ -1,6 +1,9 @@
 @import url("reset.scss");
 
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("public/font/Comfortaa-VariableFont_wght.ttf");
+}
 
 :root {
   --bg: #1a1917;
