@@ -7,6 +7,6 @@ const props = defineProps({
 
 <template>
   <a :href="props.href">
-    <img :src="props.src" />
+    <NuxtImg :src="props.src" />
   </a>
 </template>

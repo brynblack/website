@@ -12,6 +12,7 @@
           name = "env";
           buildInputs = [
             bun
+            nodejs_20
           ];
         };
       });
