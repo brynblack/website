@@ -14,7 +14,11 @@ useSeoMeta({
         <span>This blog is a <Pink>heavy WIP</Pink>.</span>
         <span>Here, have this catgirl instead. :3</span>
       </div>
-      <NuxtImg src="img/catgirl.webp" class="catgirl" />
+      <NuxtImg
+        src="img/catgirl.webp"
+        alt="Image of a catgirl."
+        class="catgirl"
+      />
     </Container>
   </main>
 </template>

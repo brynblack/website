@@ -3,6 +3,9 @@ useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} - Brynley!` : "Brynley!";
   },
+  htmlAttrs: {
+    lang: "en",
+  },
 });
 </script>
 

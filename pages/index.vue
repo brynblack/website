@@ -18,30 +18,42 @@ useSeoMeta({
           <Pink>Matrix AI</Pink>.
         </p>
         <Socials>
-          <Social src="img/github.svg" href="https://github.com/brynblack" />
+          <Social
+            src="img/github.svg"
+            href="https://github.com/brynblack"
+            alt="GitHub Logo"
+          />
           <Social
             src="img/youtube.svg"
             href="https://www.youtube.com/@brynblack9433"
+            alt="YouTube Logo"
           />
           <Social
             src="img/fedi.svg"
             href="https://woem.men/@brynblack"
+            alt="Fediverse Logo"
             rel="me"
           />
-          <Social src="img/twitch.svg" href="https://twitch.tv/brynblack" />
+          <Social
+            src="img/twitch.svg"
+            href="https://twitch.tv/brynblack"
+            alt="Twitch Logo"
+          />
           <Social
             src="img/steam.svg"
             href="https://steamcommunity.com/id/brynblack"
+            alt="Steam Logo"
           />
         </Socials>
       </div>
       <NuxtImg
         src="https://avatars.githubusercontent.com/u/49110391"
+        alt="Profile Picture"
         class="pfp"
       />
     </Container>
     <Container center>
-      <NuxtImg class="short" src="img/icons.svg" />
+      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="short" />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
