@@ -10,7 +10,7 @@
       {
         devShells.default = with pkgs; stdenv.mkDerivation {
           name = "env";
-          nativeBuildInputs = [
+          buildInputs = [
             bun
           ];
         };
