@@ -41,7 +41,7 @@ useSeoMeta({
             src="img/twitch.svg"
             href="https://twitch.tv/brynblack"
             alt="Twitch Logo"
-            height="30px"
+            height="34px"
           />
           <Social
             src="img/steam.svg"
@@ -52,7 +52,7 @@ useSeoMeta({
         </Socials>
       </div>
       <NuxtImg
-        src="https://avatars.githubusercontent.com/u/49110391"
+        src="img/pfp.jpeg"
         alt="Profile Picture"
         width="192px"
         height="192px"
