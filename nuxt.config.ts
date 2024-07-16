@@ -8,7 +8,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image"],
   nitro: {
     prerender: {
-      autoSubfolderIndex: false
+      autoSubfolderIndex: false,
+      crawlLinks: true,
+      failOnError: false,
     }
   }
 });
