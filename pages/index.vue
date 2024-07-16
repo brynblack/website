@@ -1,9 +1,6 @@
 <script setup lang="ts">
-useSeoMeta({
+useHead({
   title: "Home",
-  ogTitle: "Home",
-  description: "My personal website.",
-  ogDescription: "My personal website.",
 });
 </script>
 

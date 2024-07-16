@@ -7,6 +7,12 @@ useHead({
     lang: "en",
   },
 });
+useSeoMeta({
+  ogTitle: "Brynley!",
+  description: "The coolest software engineer in the world. For realsies. :3",
+  ogDescription: "The coolest software engineer in the world. For realsies. :3",
+  ogImage: "https://brynblack.me/img/pfp.jpeg",
+});
 </script>
 
 <template>
