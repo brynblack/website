@@ -56,6 +56,7 @@ useSeoMeta({
         alt="Profile Picture"
         width="192px"
         height="192px"
+        sizes="sm:144px md:192px"
         class="pfp"
       />
     </Container>
