@@ -22,27 +22,32 @@ useSeoMeta({
             src="img/github.svg"
             href="https://github.com/brynblack"
             alt="GitHub Logo"
+            height="30px"
           />
           <Social
             src="img/youtube.svg"
             href="https://www.youtube.com/@brynblack9433"
             alt="YouTube Logo"
+            height="20px"
           />
           <Social
             src="img/fedi.svg"
             href="https://woem.men/@brynblack"
             alt="Fediverse Logo"
+            height="30px"
             rel="me"
           />
           <Social
             src="img/twitch.svg"
             href="https://twitch.tv/brynblack"
             alt="Twitch Logo"
+            height="30px"
           />
           <Social
             src="img/steam.svg"
             href="https://steamcommunity.com/id/brynblack"
             alt="Steam Logo"
+            height="30px"
           />
         </Socials>
       </div>
@@ -55,7 +60,12 @@ useSeoMeta({
       />
     </Container>
     <Container center>
-      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="icons" />
+      <NuxtImg
+        src="img/icons.svg"
+        alt="Grid of various icons."
+        width="500px"
+        height="144px"
+      />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
@@ -105,14 +115,6 @@ useSeoMeta({
   box-shadow:
     0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-.icons {
-  width: 50%;
-}
-@media screen and (max-width: 640px) {
-  .icons {
-    width: 100%;
-  }
 }
 </style>
 
