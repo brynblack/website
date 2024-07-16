@@ -8,6 +8,12 @@ const props = defineProps({
 
 <template>
   <a :href="props.href">
-    <NuxtImg :src="props.src" :alt="props.alt" />
+    <NuxtImg :src="props.src" :alt="props.alt" width="30px" />
   </a>
 </template>
+
+<style scoped>
+a:hover {
+  transform: translateY(-5px);
+}
+</style>

@@ -18,7 +18,7 @@ defineProps({
   width: 100%;
   gap: 2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .container {
     flex-direction: column;
   }
