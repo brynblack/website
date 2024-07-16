@@ -49,11 +49,13 @@ useSeoMeta({
       <NuxtImg
         src="https://avatars.githubusercontent.com/u/49110391"
         alt="Profile Picture"
+        width="192px"
+        height="192px"
         class="pfp"
       />
     </Container>
     <Container center>
-      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="short" />
+      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="icons" />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
@@ -99,17 +101,16 @@ useSeoMeta({
 
 <style scoped>
 .pfp {
-  width: 12rem;
   border-radius: 100%;
   box-shadow:
     0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
-.short {
+.icons {
   width: 50%;
 }
-@media screen and (max-width: 600px) {
-  .short {
+@media screen and (max-width: 640px) {
+  .icons {
     width: 100%;
   }
 }

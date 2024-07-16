@@ -17,14 +17,9 @@ useSeoMeta({
       <NuxtImg
         src="img/catgirl.webp"
         alt="Image of a catgirl."
+        width="150px"
         class="catgirl"
       />
     </Container>
   </main>
 </template>
-
-<style scoped>
-.catgirl {
-  width: 10rem;
-}
-</style>
