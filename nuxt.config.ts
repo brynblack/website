@@ -6,4 +6,9 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   modules: ["@nuxt/image"],
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false
+    }
+  }
 });
