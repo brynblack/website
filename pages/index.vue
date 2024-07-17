@@ -69,7 +69,7 @@ useHead({
         </p>
         <p>
           You can find all of my personal projects on
-          <a href="https://github.com/brynblack">github</a>.
+          <NuxtLink href="https://github.com/brynblack">github</NuxtLink>.
         </p>
       </div>
     </Container>
@@ -98,7 +98,11 @@ useHead({
       </div>
       <div>
         <p>here's the website source code if you want it :3</p>
-        <a href="https://github.com/brynblack/website">source code</a>
+        <p>
+          <NuxtLink href="https://github.com/brynblack/website"
+            >source code</NuxtLink
+          >
+        </p>
       </div>
     </Container>
   </main>
