@@ -53,7 +53,9 @@ useHead({
         alt="Profile Picture"
         width="192px"
         height="192px"
-        sizes="sm:144px md:192px"
+        sizes="sm:96px md:192px"
+        quality="80"
+        format="webp"
         class="pfp"
       />
     </Container>
