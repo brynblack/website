@@ -8,14 +8,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="props.href">
+  <NuxtLink :href="props.href">
     <NuxtImg
       :src="props.src"
       :alt="props.alt"
       width="30px"
       :height="props.height"
     />
-  </a>
+  </NuxtLink>
 </template>
 
 <style scoped>
