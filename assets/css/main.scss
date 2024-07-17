@@ -1,18 +1,19 @@
-@import url("reset.scss");
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("public/font/Comfortaa-VariableFont_wght.ttf");
-}
-
 :root {
-  --bg: #1a1917;
-  --fg: white;
+  --bg-color: #1a1917;
+  --fg-color: #ffffff;
 
   --accent: #f9a8d4;
   --accent-dark: #2a2a2a;
 
   --max-width: 70rem;
+  --transition: 250ms;
+}
+
+@import url("reset.scss");
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("public/font/Comfortaa.ttf");
 }
 
 html {
@@ -20,36 +21,30 @@ html {
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--fg);
+  background-color: var(--bg-color);
+  color: var(--fg-color);
   display: flex;
   flex-direction: column;
   font-family: Comfortaa;
   height: 100dvh;
-  overflow-x: hidden;
   overflow-y: scroll;
-  width: 100dvw;
   transition-property: background-color, color;
-  transition-duration: 250ms;
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--fg);
-    color: var(--bg);
-  }
-}
+  transition-duration: var(--transition);
 
-a {
-  color: var(--accent);
-  transition-duration: 200ms;
-
-  &:hover {
-    filter: brightness(115%);
+  @media (prefers-color-scheme: light) {
+    & {
+      background-color: var(--fg-color);
+      color: var(--bg-color);
+    }
   }
 }
 
 ::-webkit-scrollbar {
   width: 5px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -63,5 +58,14 @@ a {
 
   &:hover {
     background: var(--accent);
+  }
+}
+
+a {
+  color: var(--accent);
+  transition-duration: var(--transition);
+
+  &:hover {
+    filter: brightness(115%);
   }
 }

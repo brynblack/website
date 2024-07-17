@@ -7,3 +7,30 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
   <SpeedInsights />
   <slot />
 </template>
+
+<style>
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 3.5rem;
+  gap: 2rem;
+}
+hr {
+  width: 100%;
+  border: 1px dashed var(--accent-dark);
+  max-width: var(--max-width);
+
+  @media (prefers-color-scheme: light) {
+    & {
+      filter: invert();
+    }
+  }
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+</style>

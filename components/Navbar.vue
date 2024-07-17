@@ -40,7 +40,7 @@ nav {
     }
 
     .header {
-      color: var(--fg);
+      color: var(--fg-color);
       font-weight: normal;
 
       &:hover {
@@ -50,7 +50,7 @@ nav {
 
     @media (prefers-color-scheme: light) {
       .header {
-        color: var(--bg);
+        color: var(--bg-color);
       }
     }
 

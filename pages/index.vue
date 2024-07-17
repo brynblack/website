@@ -60,12 +60,7 @@ useHead({
       />
     </Container>
     <Container center>
-      <NuxtImg
-        src="img/icons.svg"
-        alt="Grid of various icons."
-        width="500px"
-        height="144px"
-      />
+      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="icons" />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
@@ -116,30 +111,13 @@ useHead({
     0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
-</style>
+.icons {
+  width: 50%;
 
-<style>
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  margin-top: 3.5rem;
-  gap: 2rem;
-}
-hr {
-  width: 100%;
-  border: 1px dashed var(--accent-dark);
-  max-width: var(--max-width);
-}
-.container > div {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-@media (prefers-color-scheme: light) {
-  hr {
-    filter: invert();
+  @media screen and (max-width: 640px) {
+    & {
+      width: 100%;
+    }
   }
 }
 </style>
