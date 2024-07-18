@@ -18,5 +18,6 @@ useHead({
         class="catgirl"
       />
     </Container>
+    <hr />
   </main>
 </template>
