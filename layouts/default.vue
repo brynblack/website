@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
   <Navbar />
   <SpeedInsights />
   <slot />
+  <Footer />
 </template>
 
 <style>
@@ -24,7 +25,7 @@ hr {
 
   @media (prefers-color-scheme: light) {
     & {
-      filter: invert();
+      filter: invert(100%) grayscale(100%);
     }
   }
 }

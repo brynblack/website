@@ -19,7 +19,6 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100dvw;
-  height: 100dvh;
+  height: 100vh;
 }
 </style>
