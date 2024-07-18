@@ -16,7 +16,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "nuxt": "^3.12.3",
     "nuxt-security": "^2.0.0-rc.9",
-    "vue": "^3.4.31"
+    "vue": "^3.4.32"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
