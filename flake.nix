@@ -6,14 +6,12 @@
 
   outputs = { nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system}; in
-      {
-        devShells.default = with pkgs; stdenv.mkDerivation {
-          name = "env";
-          buildInputs = [
-            bun
-            nodejs_20
-          ];
-        };
+      let pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        devShells.default = with pkgs;
+          stdenv.mkDerivation {
+            name = "env";
+            buildInputs = [ bun nodejs_20 ];
+          };
       });
 }
