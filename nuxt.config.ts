@@ -38,5 +38,5 @@ export default defineNuxtConfig({
             origin: "${serverUrl}",
           },
   },
-  modules: ["@nuxt/image", "nuxt-security"],
+  modules: ["@nuxt/image", "nuxt-security", "@nuxt/content"],
 });
