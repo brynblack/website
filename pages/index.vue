@@ -29,7 +29,7 @@ useHead({
           />
           <Social
             src="img/fedi.svg"
-            href="https://woem.men/@brynblack"
+            href="https://tech.lgbt/@brynblack"
             alt="Fediverse Logo"
             height="30px"
             rel="me"
