@@ -11,7 +11,7 @@
         devShells.default = with pkgs;
           stdenv.mkDerivation {
             name = "env";
-            buildInputs = [ bun nodejs_23 ];
+            buildInputs = [ bun nodejs_24 npm-check-updates ];
           };
       });
 }

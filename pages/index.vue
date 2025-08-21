@@ -11,8 +11,9 @@ useHead({
         <h1>My name is <Pink>Brynley Llewellyn-Roux</Pink>.</h1>
         <p>I am a software engineer based in Sydney, Australia.</p>
         <p>
-          I have 7 years of programming experience and I'm currently working at
-          <Pink>Matrix AI</Pink>.
+          I have
+          <Pink>7 years</Pink>
+          of programming experience and many years industry experience.
         </p>
         <Socials>
           <Social
@@ -33,18 +34,6 @@ useHead({
             alt="Fediverse Logo"
             height="30px"
             rel="me"
-          />
-          <Social
-            src="img/twitch.svg"
-            href="https://twitch.tv/brynblack"
-            alt="Twitch Logo"
-            height="34px"
-          />
-          <Social
-            src="img/steam.svg"
-            href="https://steamcommunity.com/id/brynblack"
-            alt="Steam Logo"
-            height="30px"
           />
         </Socials>
       </div>
@@ -78,9 +67,9 @@ useHead({
       <div>
         <h1>about me</h1>
         <ul>
-          <li>19 years old</li>
+          <li>20 years old</li>
           <li>i go by she/her pronouns</li>
-          <li>studying software engineering @ UTS</li>
+          <li>studying software engineering</li>
           <li>nixos enjoyer, uses nixos on all my devices</li>
           <li>likes spinny skirts :3</li>
         </ul>

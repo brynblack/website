@@ -16,12 +16,4 @@ const props = defineProps({
 </template>
 
 <style scoped>
-* {
-  background-color: var(--accent-dark);
-  border-radius: 1rem;
-  padding: 0.75rem;
-  line-height: 0.5rem;
-  color: var(--fg-color);
-  text-decoration: none;
-}
 </style>
