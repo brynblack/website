@@ -39,4 +39,14 @@ export default defineNuxtConfig({
           },
   },
   modules: ["@nuxt/image", "nuxt-security", "@nuxt/content"],
+  vite: {
+    optimizeDeps: {
+      include: [
+        "@vue/devtools-core",
+        "@vue/devtools-kit",
+        "@vercel/analytics",
+        "@vercel/speed-insights/vue",
+      ],
+    },
+  },
 });
