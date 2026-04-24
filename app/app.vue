@@ -6,6 +6,15 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  link: [
+    {
+      rel: "preload",
+      as: "font",
+      type: "font/woff2",
+      href: "/font/Comfortaa.woff2",
+      crossorigin: "",
+    },
+  ],
 });
 useSeoMeta({
   ogTitle: "Brynley!",

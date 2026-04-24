@@ -1,10 +1,10 @@
-<script setup>
-const props = defineProps({
-  src: String,
-  href: String,
-  alt: String,
-  height: String,
-});
+<script setup lang="ts">
+const props = defineProps<{
+  src: string;
+  href: string;
+  alt: string;
+  height: string;
+}>();
 </script>
 
 <template>
@@ -19,7 +19,11 @@ const props = defineProps({
 </template>
 
 <style scoped>
-a:hover {
-  transform: translateY(-5px);
+a {
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 </style>

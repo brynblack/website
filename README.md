@@ -1,6 +1,6 @@
 # website
 
-My personal website. Built using Nuxt.js, deployed using Vercel.
+My personal website. Built using Nuxt, deployed using Vercel.
 
 ## Development
 

@@ -14,8 +14,7 @@
       {
         devShells.default =
           with pkgs;
-          stdenv.mkDerivation {
-            name = "env";
+          mkShell {
             buildInputs = [
               bun
               nodejs_25

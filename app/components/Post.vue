@@ -1,10 +1,10 @@
-<script setup>
-const props = defineProps({
-  title: String,
-  description: String,
-  date: String,
-  path: String,
-});
+<script setup lang="ts">
+const props = defineProps<{
+  title: string;
+  description: string;
+  date: string;
+  path: string;
+}>();
 </script>
 
 <template>
@@ -14,5 +14,3 @@ const props = defineProps({
     <p>{{ props.date }}</p>
   </NuxtLink>
 </template>
-
-<style scoped></style>

@@ -16,7 +16,7 @@ useHead({
 <template>
   <main>
     <Container>
-      <ContentRenderer :value="post || {}" />
+      <ContentRenderer :value="post!" />
     </Container>
   </main>
 </template>

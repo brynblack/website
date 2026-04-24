@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div :class="['container', { center: center }]">
+  <div :class="['container', { center }]">
     <slot />
   </div>
 </template>

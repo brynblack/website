@@ -16,7 +16,7 @@
 footer {
   display: flex;
   justify-content: center;
-  width: 100dw;
+  width: 100dvw;
   padding: 0 2rem 2rem 2rem;
 
   div {
