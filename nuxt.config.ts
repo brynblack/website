@@ -9,14 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@vercel/analytics",
     "@vercel/speed-insights",
-    "nuxt-security",
   ],
-  security: {
-    headers: {
-      contentSecurityPolicy:
-        process.env.NODE_ENV === "development" ? false : {},
-    },
-  },
   vite: {
     optimizeDeps: {
       include: ["@vue/devtools-core", "@vue/devtools-kit"],
