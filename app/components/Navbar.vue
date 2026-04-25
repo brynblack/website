@@ -1,10 +1,16 @@
+<script setup lang="ts">
+const route = useRoute();
+</script>
+
 <template>
   <nav>
     <div class="content">
       <NuxtLink class="header" to="/">| brynblack |</NuxtLink>
       <div class="links">
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/blog">Blog</NuxtLink>
+        <NuxtLink to="/" :class="{ active: route.path === '/' }">Home</NuxtLink>
+        <NuxtLink to="/blog" :class="{ active: route.path.startsWith('/blog') }"
+          >Blog</NuxtLink
+        >
       </div>
     </div>
   </nav>
@@ -16,7 +22,7 @@ nav {
   display: flex;
   justify-content: center;
   position: fixed;
-  width: 100dvw;
+  width: 100%;
   z-index: 99;
 
   .content {
@@ -35,7 +41,7 @@ nav {
       }
     }
 
-    .router-link-exact-active {
+    .active {
       color: var(--accent);
       font-weight: bold;
     }

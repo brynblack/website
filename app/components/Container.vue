@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps({
-  center: Boolean,
-});
+defineProps<{
+  center?: boolean;
+}>();
 </script>
 
 <template>

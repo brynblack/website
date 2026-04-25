@@ -11,14 +11,15 @@ useHead({
 <template>
   <main>
     <Container class="posts">
-      <div v-for="post in posts" :key="post.path">
-        <Post
-          :title="post.title"
-          :description="post.description"
-          :date="post.date"
-          :path="post.path"
-        />
-      </div>
+      <Post
+        v-for="post in posts"
+        :key="post.path"
+        :title="post.title"
+        :description="post.description"
+        :date="post.date"
+        :path="post.path"
+      />
+      <p v-if="!posts?.length">No posts yet. Check back soon!</p>
     </Container>
   </main>
 </template>

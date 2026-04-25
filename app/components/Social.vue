@@ -3,16 +3,16 @@ const props = defineProps<{
   src: string;
   href: string;
   alt: string;
-  height: string;
+  height: number;
 }>();
 </script>
 
 <template>
-  <NuxtLink :href="props.href">
+  <NuxtLink :href="props.href" target="_blank" rel="noopener noreferrer">
     <NuxtImg
       :src="props.src"
       :alt="props.alt"
-      width="30px"
+      width="30"
       :height="props.height"
     />
   </NuxtLink>

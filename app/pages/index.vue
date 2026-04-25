@@ -20,19 +20,19 @@ useHead({
             src="img/github.svg"
             href="https://github.com/brynblack"
             alt="GitHub Logo"
-            height="30px"
+            :height="30"
           />
           <Social
             src="img/youtube.svg"
             href="https://www.youtube.com/@brynblack9433"
             alt="YouTube Logo"
-            height="20px"
+            :height="20"
           />
           <Social
             src="img/fedi.svg"
             href="https://tech.lgbt/@brynblack"
             alt="Fediverse Logo"
-            height="30px"
+            :height="30"
             rel="me"
           />
         </Socials>
@@ -40,8 +40,8 @@ useHead({
       <NuxtImg
         src="img/pfp.jpeg"
         alt="Profile Picture"
-        width="192px"
-        height="192px"
+        width="192"
+        height="192"
         sizes="sm:96px md:192px"
         quality="80"
         format="webp"
@@ -49,7 +49,13 @@ useHead({
       />
     </Container>
     <Container center>
-      <NuxtImg src="img/icons.svg" alt="Grid of various icons." class="icons" />
+      <NuxtImg
+        src="img/icons.svg"
+        alt="Grid of various icons."
+        width="554"
+        height="161"
+        class="icons"
+      />
       <div>
         <p>
           I like to dabble in various different technologies and languages. I
@@ -65,7 +71,7 @@ useHead({
     <hr />
     <Container>
       <div>
-        <h1>about me</h1>
+        <h2>about me</h2>
         <ul>
           <li>20 years old</li>
           <li>i go by she/her pronouns</li>
@@ -75,7 +81,7 @@ useHead({
         </ul>
       </div>
       <div>
-        <h1>langs i know</h1>
+        <h2>langs i know</h2>
         <ul>
           <li>rust</li>
           <li>c++</li>
