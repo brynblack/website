@@ -23,17 +23,22 @@ useHead({
             :height="30"
           />
           <Social
+            src="img/modrinth.svg"
+            href="https://modrinth.com/user/brynblack"
+            alt="Modrinth Logo"
+            :height="30"
+          />
+          <Social
             src="img/youtube.svg"
-            href="https://www.youtube.com/@brynblack9433"
+            href="https://www.youtube.com/@brynblackk"
             alt="YouTube Logo"
             :height="20"
           />
           <Social
-            src="img/fedi.svg"
-            href="https://tech.lgbt/@brynblack"
-            alt="Fediverse Logo"
+            src="img/linkedin.svg"
+            href="https://linkedin.com/in/brynley-llewellyn-roux-b16184231"
+            alt="LinkedIn Logo"
             :height="30"
-            rel="me"
           />
         </Socials>
       </div>
