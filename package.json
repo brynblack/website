@@ -12,16 +12,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.13.0",
+    "@nuxt/content": "^3.14.0",
     "@nuxt/image": "^2.0.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "nuxt": "^4.4.5"
+    "nuxt": "^4.4.6"
   },
   "devDependencies": {
-    "@types/node": "^25.8.0",
+    "@types/node": "^25.9.1",
     "better-sqlite3": "^12.10.0",
     "prettier": "^3.8.3",
-    "sass": "^1.99.0"
+    "sass": "^1.100.0"
   }
 }

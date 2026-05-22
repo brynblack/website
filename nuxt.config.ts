@@ -1,15 +1,15 @@
-import { bundledLanguagesInfo } from "shiki";
+import { bundledLanguagesInfo, type BundledLanguage } from "shiki";
 
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  compatibilityDate: "2026-05-16",
+  compatibilityDate: "2026-05-22",
   content: {
     build: {
       markdown: {
         highlight: {
-          langs: bundledLanguagesInfo.map((l) => l.id),
+          langs: bundledLanguagesInfo.map((l) => l.id as BundledLanguage),
           theme: {
             default: "github-dark",
             light: "github-light",
