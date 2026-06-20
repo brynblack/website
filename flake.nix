@@ -17,8 +17,6 @@
           mkShell {
             buildInputs = [
               bun
-              nodejs_latest
-              npm-check-updates
             ];
           };
       }
