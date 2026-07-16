@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  compatibilityDate: "2026-05-22",
+  compatibilityDate: "2026-07-17",
   content: {
     build: {
       markdown: {

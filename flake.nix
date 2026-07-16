@@ -18,6 +18,9 @@
             buildInputs = [
               bun
             ];
+            # sharp's prebuilt native binaries (via @nuxt/image) link against
+            # libstdc++ at runtime, which the nix shell doesn't otherwise expose.
+            LD_LIBRARY_PATH = lib.makeLibraryPath [ stdenv.cc.cc.lib ];
           };
       }
     );
