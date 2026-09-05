@@ -78,7 +78,7 @@ useHead({
       <div>
         <h2>about me</h2>
         <ul>
-          <li>20 years old</li>
+          <li>21 years old</li>
           <li>i go by she/her pronouns</li>
           <li>studying software engineering</li>
           <li>nixos enjoyer, uses nixos on all my devices</li>

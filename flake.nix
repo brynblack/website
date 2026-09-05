@@ -10,6 +10,14 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        nodeShim = pkgs.writeShellScriptBin "node" ''
+          case "''${1-}" in
+            -v | --version)
+              exec ${pkgs.bun}/bin/bun -e 'console.log("v" + process.versions.node)'
+              ;;
+          esac
+          exec -a node ${pkgs.bun}/bin/bun "$@"
+        '';
       in
       {
         devShells.default =
@@ -17,9 +25,8 @@
           mkShell {
             buildInputs = [
               bun
+              nodeShim
             ];
-            # sharp's prebuilt native binaries (via @nuxt/image) link against
-            # libstdc++ at runtime, which the nix shell doesn't otherwise expose.
             LD_LIBRARY_PATH = lib.makeLibraryPath [ stdenv.cc.cc.lib ];
           };
       }
