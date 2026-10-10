@@ -10,8 +10,8 @@ useHead({
 
 <template>
   <main>
-    <Container class="posts">
-      <Post
+    <BaseContainer class="posts">
+      <PostCard
         v-for="post in posts"
         :key="post.path"
         :title="post.title"
@@ -20,7 +20,7 @@ useHead({
         :path="post.path"
       />
       <p v-if="!posts?.length">No posts yet. Check back soon!</p>
-    </Container>
+    </BaseContainer>
   </main>
 </template>
 

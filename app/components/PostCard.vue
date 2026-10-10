@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string;
   description: string;
   date: string;
@@ -8,15 +8,16 @@ const props = defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to="props.path">
-    <h2>{{ props.title }}</h2>
-    <p>{{ props.description }}</p>
+  <NuxtLink :to="path">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
     <p class="date">
       {{
-        new Date(props.date).toLocaleDateString("en-AU", {
+        new Date(date).toLocaleDateString("en-AU", {
           year: "numeric",
           month: "long",
           day: "numeric",
+          timeZone: "UTC",
         })
       }}
     </p>

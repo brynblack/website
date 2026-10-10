@@ -5,7 +5,7 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 });
 
 if (!post.value) {
-  throw createError({ statusCode: 404, statusMessage: "Post not found" });
+  throw createError({ status: 404, statusText: "Post not found" });
 }
 
 useHead({ title: post.value.title });
@@ -19,9 +19,9 @@ useSeoMeta({
 
 <template>
   <main>
-    <Container>
-      <ContentRenderer class="prose" :value="post!" />
-    </Container>
+    <BaseContainer>
+      <ContentRenderer v-if="post" class="prose" :value="post" />
+    </BaseContainer>
   </main>
 </template>
 

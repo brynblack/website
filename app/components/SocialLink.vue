@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   src: string;
   href: string;
   alt: string;
@@ -8,13 +8,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <NuxtLink :href="props.href" target="_blank" rel="noopener noreferrer">
-    <NuxtImg
-      :src="props.src"
-      :alt="props.alt"
-      width="30"
-      :height="props.height"
-    />
+  <NuxtLink :href="href" target="_blank" rel="noopener noreferrer">
+    <NuxtImg :src="src" :alt="alt" width="30" :height="height" />
   </NuxtLink>
 </template>
 

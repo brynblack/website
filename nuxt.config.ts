@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  compatibilityDate: "2026-09-05",
+  compatibilityDate: "2026-10-10",
   content: {
     build: {
       markdown: {
@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
+    "@nuxt/eslint",
     "@nuxt/image",
     "@vercel/analytics",
     "@vercel/speed-insights",

@@ -6,44 +6,44 @@ useHead({
 
 <template>
   <main>
-    <Container center>
+    <BaseContainer center>
       <div>
-        <h1>My name is <Pink>Brynley Llewellyn-Roux</Pink>.</h1>
+        <h1>My name is <AccentText>Brynley Llewellyn-Roux</AccentText>.</h1>
         <p>I am a software engineer based in Sydney, Australia.</p>
         <p>
           I have
-          <Pink>7 years</Pink>
+          <AccentText>7 years</AccentText>
           of programming experience and many years industry experience.
         </p>
-        <Socials>
-          <Social
-            src="img/github.svg"
+        <SocialLinks>
+          <SocialLink
+            src="/img/github.svg"
             href="https://github.com/brynblack"
             alt="GitHub Logo"
             :height="30"
           />
-          <Social
-            src="img/modrinth.svg"
+          <SocialLink
+            src="/img/modrinth.svg"
             href="https://modrinth.com/user/brynblack"
             alt="Modrinth Logo"
             :height="30"
           />
-          <Social
-            src="img/youtube.svg"
+          <SocialLink
+            src="/img/youtube.svg"
             href="https://www.youtube.com/@brynblackk"
             alt="YouTube Logo"
             :height="20"
           />
-          <Social
-            src="img/linkedin.svg"
+          <SocialLink
+            src="/img/linkedin.svg"
             href="https://linkedin.com/in/brynley-llewellyn-roux-b16184231"
             alt="LinkedIn Logo"
             :height="30"
           />
-        </Socials>
+        </SocialLinks>
       </div>
       <NuxtImg
-        src="img/pfp.jpeg"
+        src="/img/pfp.jpeg"
         alt="Profile Picture"
         width="192"
         height="192"
@@ -52,10 +52,10 @@ useHead({
         format="webp"
         class="pfp"
       />
-    </Container>
-    <Container center>
+    </BaseContainer>
+    <BaseContainer center>
       <NuxtImg
-        src="img/icons.svg"
+        src="/img/icons.svg"
         alt="Grid of various icons."
         width="554"
         height="161"
@@ -72,9 +72,9 @@ useHead({
           <NuxtLink href="https://github.com/brynblack">github</NuxtLink>.
         </p>
       </div>
-    </Container>
+    </BaseContainer>
     <hr />
-    <Container>
+    <BaseContainer>
       <div>
         <h2>about me</h2>
         <ul>
@@ -104,7 +104,7 @@ useHead({
           >
         </p>
       </div>
-    </Container>
+    </BaseContainer>
     <hr />
   </main>
 </template>

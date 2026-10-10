@@ -4,25 +4,29 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "check": "nuxt typecheck",
+    "check": "nuxt prepare && bun scripts/vue-tsc.cjs -b --noEmit && eslint . && prettier . --check",
     "clean": "nuxt cleanup",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint": "prettier . --check",
+    "format": "prettier . --write",
+    "lint": "eslint .",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@nuxt/content": "^3.16.0",
+    "@nuxt/content": "^3.16.1",
     "@nuxt/image": "^2.1.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "nuxt": "^4.5.2"
+    "nuxt": "^4.6.1"
   },
   "devDependencies": {
-    "@types/node": "^26.4.1",
-    "prettier": "^3.9.6",
-    "sass": "^1.104.0",
-    "vue-tsc": "^3.3.11"
+    "@nuxt/eslint": "^1.17.0",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "sass": "^1.105.1",
+    "vue-tsc": "^3.3.12"
   }
 }
